@@ -8,14 +8,27 @@
 
 require 'faker'
 
+Dog.destroy_all
+Dogsitter.destroy_all
+City.destroy_all
+
+cities = []
 dogsitters = []
 dogs = []
-cities = []
+
+
+5.times do 
+    cities = City.create!(
+        city_name: Faker::TvShows::GameOfThrones.city,
+    )
+    cities << city
+end
+
 
 5.times do
     dogsitters = Dogsitter.create!(
         name: Faker::TvShows::GameOfThrones.character,
-        #city_id: cities[rand(0..4)].id
+        city_id: cities[rand(0..4)].id
     )
     dogsitters << dogsitter
 end
@@ -31,17 +44,11 @@ end
 end
 
 
-5.times do 
-    cities = City.create!(
-        city_name: Faker::TvShows::GameOfThrones.city,
-    )
-    cities << city
-end
-
-
 15.times do
     Stroll.create!(
         date: Faker::Date.in_date_period,
-        dogsitter_id: dogsitters[rand(0..4)].id,
+        dogsitter_id: dogsitters[rand(0..4)].id
     )
 end
+
+puts "Valar morghulis..."
