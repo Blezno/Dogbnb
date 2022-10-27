@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+EXERCICE DOGBNB 
 
-Things you may want to cover:
+**Même principe que FreeDoc**
 
-* Ruby version
+Le but: 
 
-* System dependencies
+* Créer des model, des tables etc.
 
-* Configuration
+* Gérer les migrations
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Afficher de beaux fichiers seed :)
